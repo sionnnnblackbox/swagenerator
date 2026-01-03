@@ -1,0 +1,97 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SWAG Generator | Justin Bieber Style</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:opsz,wght@6..96,700&family=Montserrat:wght@200;400&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        /* 
+           PRADA ROSAN MASTER DEFINITION
+           We use Bodoni Moda with forced optical sizing at 96 for the sharpest logo-style contrast.
+        */
+        @font-face {
+            font-family: 'Rosan';
+            /* Only use the highest contrast version available via Google Fonts */
+            src: local('Bodoni Moda 700'), local('Bodoni Moda Bold'), local('Bodoni Moda');
+            font-weight: 700;
+            font-style: normal;
+        }
+
+        :root {
+            --bg-transition: background-color 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        body {
+            font-family: 'Inter', sans-serif;
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
+            transition: var(--bg-transition);
+        }
+        .font-serif-swag {
+            font-family: 'Rosan', "Bodoni Moda", serif;
+            font-weight: 700;
+            font-optical-sizing: auto;
+            /* This is critical for the Prada look: forcing max contrast */
+            font-variation-settings: "opsz" 96;
+        }
+        .font-minimalist {
+            font-family: 'Montserrat', sans-serif;
+            letter-spacing: 0.3em;
+            text-transform: uppercase;
+        }
+        canvas {
+            max-width: 100%;
+            height: auto;
+            box-shadow: 0 40px 100px -20px rgba(0,0,0,0.8);
+            transition: opacity 0.3s ease;
+        }
+        .fade-in {
+            animation: fadeIn 1.2s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        .album-cover-generator {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        ::-webkit-scrollbar {
+            width: 4px;
+        }
+        ::-webkit-scrollbar-track {
+            background: transparent;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: rgba(128, 128, 128, 0.3);
+            border-radius: 10px;
+        }
+
+        textarea:focus {
+            box-shadow: none !important;
+        }
+    </style>
+<script type="importmap">
+{
+  "imports": {
+    "react": "https://esm.sh/react@^19.2.3",
+    "react-dom/": "https://esm.sh/react-dom@^19.2.3/",
+    "react/": "https://esm.sh/react@^19.2.3/"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+<body class="bg-[#0b0b0b] text-white">
+    <div id="root"></div>
+<script type="module" src="/index.tsx"></script>
+</body>
+</html>
